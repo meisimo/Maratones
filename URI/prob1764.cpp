@@ -4,7 +4,7 @@
 
 using namespace std;
 
-typedef pair<int,pair<int,int>> pp;
+typedef pair<int,<pair<int,int>> pp;
 
 int parent[MAXV];
 pp Edges[MAXE];
@@ -48,11 +48,9 @@ int main(){
         }
 
         sort( Edges, Edges+E );
-/*
-        for(int i =0;i<E; i++)
-            cout<<Edges[i].second.first<<","<<Edges[i].second.second<<","<<Edges[i].first<<endl;
-*/
+
         init(V);
+
         for(int i=0; i<E; i++){
             if( findP(Edges[i].second.first)!=findP(Edges[i].second.second) ){
                 unit(Edges[i].second.first,Edges[i].second.second);
@@ -61,7 +59,5 @@ int main(){
         }
         cout<<W<<endl;
     }
-
-
     return 0;
 }

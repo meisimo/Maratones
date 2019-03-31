@@ -59,7 +59,7 @@ int main(){
                 s++;
             }
         }
-
+        cout<<"\n";
         if (s)  cout<<s+2<<"\n";
         else    cout<<"3"<<"\n";
 
