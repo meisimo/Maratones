@@ -1,76 +1,65 @@
 #include <bits/stdc++.h>
+#define N 5
 
 using namespace std;
 
 typedef unsigned unt;
 
-int main(){
+int main()
+{
+    /* 
     ios::sync_with_stdio(0);
     cin.tie(0);
+    */
+    string str, STR[N];
+    int k, min_val, min_j, K[N], i, L, j;
+    char c;
 
-    string str0, tmp_str, STR[5];
-    unt min_dis, i_min, k, i = 0, j, l, eq, aux, tmp_min;
-    int L, tmp_L;
+    memset(K, 0, sizeof K);
 
-    cin>>str0>>k;
-    while(i<5){
-        cin>>STR[i++];
-    }
+    cin >> str;
+    cin >> k;
+    cin.ignore(1);
+    for (i = 0; i < N; i++)
+        cin >> STR[i];
 
-    L       = str0.size();
-    min_dis = k+1;
-    i       = 0;
-
-    while(i<5){
-        tmp_str = STR[i++];
-        tmp_L   = tmp_str.size();
-
-        if(k < abs(tmp_L-L))  continue;
-
-        L;
-        tmp_L;
-        unt M1[L+1], M2[L+1], *m1, *m2, *m_aux;
-
-        m1 = M1;
-        m2 = M2;
-        for(j=0; j<=L; j++){
-            m1[j] = j;
-        }
-
-        for(l=1; l<=tmp_L; l++){
-            tmp_min = k+1;
-            m2[0] = l;
-            for(j=1; j<=L; j++){
-                eq      = (str0.at(j-1) != tmp_str.at(l-1));
-                aux     = min(m1[j-1],min(m1[j], m2[j-1])) + eq;
-                tmp_min = min(tmp_min, aux);
-                m2[j]   = aux;
+    L = str.size();
+    for (i = 0; i < L; i++)
+    {
+        c = str.at(i);
+        min_val = k;
+        for (j = 0; j < N; j++)
+        {
+            if (c != STR[j].at(i))
+            {
+                K[j]++;
             }
-            if( k < tmp_min){
-                break;
+            if (K[j] < min_val)
+            {
+                min_val = K[j];
+                min_j = j;
             }
-            m_aux = m1;
-            m1    = m2;
-            m2    = m_aux;
         }
-        if(aux < min_dis){
-            min_dis = aux;
-            i_min   = i;
+        if (k < min_val)
+        {
+            break;
         }
     }
-    if( k<min_dis){
-        cout<<"-1"<<endl;
+    if (k < min_val)
+    {
+        cout << "-1\n";
     }
-    else {
-        cout<<i_min<<endl;
-        cout<<min_dis<<endl;
+    else
+    {
+        cout << (min_j+1) << endl
+             << min_val << endl;
     }
     return 0;
 }
 
 /*
 cbufllatkz
-5
+1
 cbofllafkz
 cbhflluteq
 cbuzqzatmz

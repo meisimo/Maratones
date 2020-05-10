@@ -1,5 +1,6 @@
 *.exe
 *.txt
+*.text
 *.o
 URI/.vscode/*
 .vscode/*
