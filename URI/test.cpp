@@ -1,7 +1,10 @@
-#include <bits/stdc++.h>
+#include <stdio.h>
+#include <iostream>
 
-int main(){
-	cin<<"Hello world!\n";
+using namespace std;
 
-	return 0;
+int main() {
+  cout<<"Holaa!";
+  printf("Hello World!");
+  return 0;
 }
