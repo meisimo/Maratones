@@ -1,0 +1,12 @@
+Case 1:
+Michael Jordan 16
+Scotty Pippen 17
+Charles Barkley 18
+Case 2:
+Charles 20
+Michael 20
+Scotty 20
+Case 3:
+Charl es Barkley 20
+Charle s Barkley 20
+Charles Barkley 20

@@ -1,0 +1,15 @@
+2
+TEAM 1 4 vs. 2 TEAM 2
+TEAM 2 2 vs. 0 TEAM 1
+2
+TEAM 1 4 vs. 2 TEAM 2
+TEAM 2 4 vs. 2 TEAM 1
+2
+TEAM 1 4 vs. 0 TEAM 2
+TEAM 2 0 vs. 0 TEAM 1
+2
+TEAM 1 4 vs. 0 TEAM 2
+TEAM 2 4 vs. 0 TEAM 1
+2
+TEAM 1 4 vs. 0 TEAM 2
+TEAM 2 4 vs. 1 TEAM 1

@@ -1,0 +1,19 @@
+Syntax Error!
+Syntax Error!
+AB+c*
+Lexical Error!
+abc*+2/e*a+
+abc*+2/ea+*
+Syntax Error!
+Syntax Error!
+Syntax Error!
+Lexical Error!
+ab+c-
+abc*d/-e+
+Syntax Error!
+Syntax Error!
+Syntax Error!
+s
+a
+a+
+a+
