@@ -6,6 +6,7 @@ using namespace std;
 
 int main(){
   string input;
+  bool f;
   int n, i, sol=0, j;
 
   int A[MAX], B[MAX], sum=0, x = 0, y;
@@ -21,8 +22,8 @@ int main(){
 
   for(i=0; i<n; i++){
     x += A[i];
-
-    if(!(sum%x)){
+    
+    if( !x || !(sum%x)){
       y = 0;
       sol = 1;
       for(j = i+1; j<n; j++){

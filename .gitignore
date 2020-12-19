@@ -1,6 +1,7 @@
 *.exe
 *.txt
 *.text
+*.test
 *.o
 *.out
 URI/.vscode/*
