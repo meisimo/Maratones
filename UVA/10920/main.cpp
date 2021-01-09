@@ -3,21 +3,22 @@
 using namespace std;
 
 void S(const long long N, const long long L){
-  long long x, y, dir, m = 0, i = 0, j, l = 0;
+  long long x, y, dir, m = 0, i = 0, j = 0, l = 0, step = 0;
 
   x = y = ((N >> 1) +( N & 1));
 
-  while ( i < L) {
-    dir = l % 4;
-    m  += dir == 0 || dir == 2;
-    j   = 0;
-    for ( j = 0; j < m && i < L; j++, i++){
-      if      (dir == 0) y++;
-      else if (dir == 1) x--;
-      else if (dir == 2) y--;
-      else               x++;
-    }
+  while ( j < L) {
+    dir  = l % 4;
+    m   += dir == 0 || dir == 2;
+    step = min(m, L - j);
+
+    if      (dir == 0) y += step;
+    else if (dir == 1) x -= step;
+    else if (dir == 2) y -= step;
+    else               x += step;
+
     l ++;
+    j += step;
   }
   cout << "Line = " << y <<  ", column = " << x << ".\n";
 }
